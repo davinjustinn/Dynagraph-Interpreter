@@ -98,7 +98,7 @@ if input =='Your Image':
     uploaded_file = st.sidebar.file_uploader("Choose dynagraph file: ",type=['png','jpg'])
 
     if uploaded_file is None:
-        image = Image.open('test/' + os.listdir('dataset')[0])
+        image = Image.open('dataset/' + os.listdir('dataset')[0])
         st.image(image)
         
     else:
