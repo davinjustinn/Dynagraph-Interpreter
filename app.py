@@ -98,7 +98,7 @@ if input =='Your Image':
     uploaded_file = st.sidebar.file_uploader("Choose dynagraph file: ",type=['png','jpg'])
 
     if uploaded_file is None:
-        image = Image.open('test/' + os.listdir('test')[0])
+        image = Image.open('test/' + os.listdir('dataset')[0])
         st.image(image)
         
     else:
@@ -106,9 +106,9 @@ if input =='Your Image':
         image = Image.open(uploaded_file)
 
 else: 
-    image_opt = st.sidebar.selectbox('Choose sample image: ',os.listdir('test'))
+    image_opt = st.sidebar.selectbox('Choose sample image: ',os.listdir('dataset'))
     
-    image = Image.open('test/' + image_opt)
+    image = Image.open('dataset/' + image_opt)
     st.image(image)
 
 
